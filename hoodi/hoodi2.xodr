@@ -19,7 +19,7 @@
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
                         <!-- <speed sOffset="0.0" max="22.22" /> -->
                         <!-- given in m/s, here: 80 km/h -->
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                         <!-- given in m/s, here: 50 km/h -->                        
                     </lane>
                     <lane id="-2" type="driving" level="0">
@@ -45,7 +45,7 @@
                 <right>
                     <lane id="-1" type="driving" level="0">                      
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">                      
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
@@ -70,7 +70,7 @@
                 <right>
                     <lane id="-1" type="driving" level="0">                       
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">                       
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
@@ -80,13 +80,13 @@
         </lanes>
     </road>  
 
-    <road name="KEB2_Hoodi" length="500.0" id="4" junction="-1">
+    <road name="KEB2_Hoodi" length="400.0" id="4" junction="-1">
         <link>
             <predecessor elementType="junction" elementId="4" />
-            <successor elementType="junction" elementId="1" />
+            <successor elementType="road" elementId="104" contactPoint="end" />
         </link>
         <planView>
-            <geometry s="0.0" x="900.0" y="300.0" hdg="0.0" length="500.0">
+            <geometry s="0.0" x="900.0" y="300.0" hdg="0.0" length="400.0">
                 <line />
             </geometry>
         </planView>        
@@ -94,16 +94,52 @@
             <laneSection s="0.0">
                 <right>
                     <lane id="-1" type="driving" level="0">
+                        <link>
+                            <successor id="-1" />
+                        </link>                        
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">
+                        <link>
+                            <successor id="-2" />
+                        </link>                        
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
                     </lane>
                 </right>
             </laneSection>
         </lanes>
     </road> 
+    <road name="KEB2_Hoodi_slow" length="100.0" id="104" junction="-1">
+        <link>
+            <predecessor elementType="road" elementId="4" contactPoint="start" />
+            <successor elementType="junction" elementId="1" />
+        </link>
+        <planView>
+            <geometry s="0.0" x="1300.0" y="300.0" hdg="0.0" length="100.0">
+                <line />
+            </geometry>
+        </planView>        
+        <lanes>
+            <laneSection s="0.0">
+                <right>
+                    <lane id="-1" type="driving" level="0">
+                        <link>
+                            <predecessor id="-1" />
+                        </link>                                                
+                        <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
+                        <speed sOffset="0.0" max="2.8" />
+                    </lane>
+                    <lane id="-2" type="driving" level="0">
+                        <link>
+                            <predecessor id="-2" />
+                        </link>
+                        <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>     
 
     <road name="Hoodi_Raj" length="300.0" id="5" junction="-1">
         <link>
@@ -120,7 +156,7 @@
                 <right>
                     <lane id="-1" type="driving" level="0">
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
@@ -144,7 +180,7 @@
                 <right>
                     <lane id="-1" type="driving" level="0">                       
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">                      
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
@@ -161,7 +197,7 @@
             <successor elementType="junction" elementId="5" />
         </link>
         <planView>
-            <geometry s="0.0" x="2300.0" y="330.0" hdg="3.141593" length="600.0">
+            <geometry s="0.0" x="2300.0" y="320.0" hdg="3.141593" length="600.0">
                 <line />
             </geometry>
         </planView>        
@@ -170,7 +206,7 @@
                 <right>
                     <lane id="-1" type="driving" level="0">
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
@@ -186,7 +222,7 @@
             <successor elementType="junction" elementId="1" />
         </link>
         <planView>
-            <geometry s="0.0" x="1700.0" y="330.0" hdg="3.141593" length="300.0">
+            <geometry s="0.0" x="1700.0" y="320.0" hdg="3.141593" length="300.0">
                 <line />
             </geometry>
         </planView>        
@@ -195,7 +231,7 @@
                 <right>
                     <lane id="-1" type="driving" level="0">                      
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">                     
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
@@ -211,7 +247,7 @@
             <successor elementType="junction" elementId="4" />
         </link>
         <planView>
-            <geometry s="0.0" x="1400.0" y="330.0" hdg="3.141593" length="500.0">
+            <geometry s="0.0" x="1400.0" y="320.0" hdg="3.141593" length="500.0">
                 <line />
             </geometry>
         </planView>        
@@ -220,7 +256,7 @@
                 <right>
                     <lane id="-1" type="driving" level="0">
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
@@ -232,11 +268,11 @@
     
     <road name="KEB2_KEB1" length="100.0" id="10" junction="-1">
         <link>
-            <predecessor elementType="road" elementId="9" contactPoint="end" />
-            <successor elementType="road" elementId="11" contactPoint="start" />
+            <predecessor elementType="junction" elementId="4" />
+            <successor elementType="junction" elementId="3" />
         </link>
         <planView>
-            <geometry s="0.0" x="900.0" y="330.0" hdg="3.141593" length="100.0">
+            <geometry s="0.0" x="900.0" y="320.0" hdg="3.141593" length="100.0">
                 <line />
             </geometry>
         </planView>        
@@ -244,31 +280,24 @@
             <laneSection s="0.0">
                 <right>
                     <lane id="-1" type="driving" level="0">
-                        <link>
-                            <predecessor id="-1" />
-                            <successor id="-1" />
-                        </link>                        
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">
-                        <link>
-                            <predecessor id="-2" />
-                            <successor id="-2" />
-                        </link>                        
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
                     </lane>
                 </right>
             </laneSection>
         </lanes>
-    </road>              
+    </road>          
+
     <road name="KEB1_ABB" length="500.0" id="11" junction="-1">
         <link>
-            <predecessor elementType="road" elementId="10" contactPoint="end" />
-            <successor elementType="road" elementId="12" contactPoint="start" />
+            <predecessor elementType="junction" elementId="3" />
+            <successor elementType="junction" elementId="2" />
         </link>
         <planView>
-            <geometry s="0.0" x="800.0" y="330.0" hdg="3.141593" length="500.0">
+            <geometry s="0.0" x="800.0" y="320.0" hdg="3.141593" length="500.0">
                 <line />
             </geometry>
         </planView>        
@@ -276,30 +305,23 @@
             <laneSection s="0.0">
                 <right>
                     <lane id="-1" type="driving" level="0">
-                        <link>
-                            <predecessor id="-1" />
-                            <successor id="-1" />
-                        </link>                        
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">
-                        <link>
-                            <predecessor id="-2" />
-                            <successor id="-2" />
-                        </link>                        
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
                     </lane>
                 </right>
             </laneSection>
         </lanes>
     </road>
+
     <road name="ABB_Metro" length="300.0" id="12" junction="-1">
         <link>
-            <predecessor elementType="road" elementId="11" contactPoint="start" />
+            <predecessor elementType="junction" elementId="2" />
         </link>
         <planView>
-            <geometry s="0.0" x="300.0" y="330.0" hdg="3.141593" length="300.0">
+            <geometry s="0.0" x="300.0" y="320.0" hdg="3.141593" length="300.0">
                 <line />
             </geometry>
         </planView>        
@@ -307,16 +329,10 @@
             <laneSection s="0.0">
                 <right>
                     <lane id="-1" type="driving" level="0">
-                        <link>
-                            <predecessor id="-1" />
-                        </link>                        
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />
+                        <!-- <speed sOffset="0.0" max="13.89" /> -->
                     </lane>
                     <lane id="-2" type="driving" level="0">
-                        <link>
-                            <predecessor id="-2" />
-                        </link>                        
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
                     </lane>
                 </right>
@@ -327,7 +343,7 @@
     <!-- end of direction Zuri to Metropolis-->  
 
     <!-- begin of Hoodi village road -->        
-    <road name="To_Hoodi" length="500.0" id="13" junction="1">
+    <road name="To_Hoodi" length="500.0" id="13" junction="-1">
         <link>
             <predecessor elementType="junction" elementId="1" />
         </link>
@@ -341,7 +357,7 @@
                 <right>
                     <lane id="-1" type="driving" level="0">                        
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />    
+                        <!-- <speed sOffset="0.0" max="13.89" />     -->
                     </lane>
                     <lane id="-2" type="driving" level="0">
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
@@ -365,7 +381,7 @@
                 <right>
                     <lane id="-1" type="driving" level="0">                      
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
-                        <speed sOffset="0.0" max="13.89" />    
+                        <!-- <speed sOffset="0.0" max="13.89" />     -->
                     </lane>
                     <lane id="-2" type="driving" level="0">
                         <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
@@ -374,19 +390,119 @@
             </laneSection>
         </lanes>
     </road>
-    <!-- end of Hoodi Village road -->   
+    <!-- end of Hoodi Village road -->  
+
+    <!-- begin of GNS road -->
+    <road name="ABB_ATM" length="880.0" id="18" junction="-1">
+        <link>
+            <predecessor elementType="junction" elementId="1" />
+        </link>
+        <planView>
+            <geometry s="0.0" x="315.0" y="325.0" hdg="5.0091" length="880.0">
+                <line />
+            </geometry>
+        </planView>        
+        <lanes>
+            <laneSection s="0.0">
+                <right>
+                    <lane id="-1" type="driving" level="0">                        
+                        <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
+                        <!-- <speed sOffset="0.0" max="13.89" />     -->
+                    </lane>
+                    <lane id="-2" type="driving" level="0">
+                        <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+
+    <road name="ATM_ABB" length="915.0" id="17" junction="-1">
+        <link>
+            <successor elementType="junction" elementId="1" />
+        </link>
+        <planView>
+            <geometry s="0.0" x="560.0" y="1200.0" hdg="1.86751" length="915.0">
+                <line />
+            </geometry>
+        </planView>        
+        <lanes>
+            <laneSection s="0.0">
+                <right>
+                    <lane id="-1" type="driving" level="0">                      
+                        <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
+                        <!-- <speed sOffset="0.0" max="13.89" />     -->
+                    </lane>
+                    <lane id="-2" type="driving" level="0">
+                        <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <!-- end of GNS road -->            
+
+
+    <!-- begin of GG road -->  
+    <road name="Hoodi_ATM" length="1205.0" id="15" junction="-1">
+        <link>
+            <predecessor elementType="junction" elementId="1" />
+        </link>
+        <planView>
+            <geometry s="0.0" x="1400.0" y="325.0" hdg="3.9421" length="1205.0">
+                <line />
+            </geometry>
+        </planView>        
+        <lanes>
+            <laneSection s="0.0">
+                <right>
+                    <lane id="-1" type="driving" level="0">                        
+                        <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
+                        <!-- <speed sOffset="0.0" max="13.89" />     -->
+                    </lane>
+                    <lane id="-2" type="driving" level="0">
+                        <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+
+    <road name="ATM_Hoodi" length="1150.0" id="16" junction="-1">
+        <link>
+            <successor elementType="junction" elementId="1" />
+        </link>
+        <planView>
+            <geometry s="0.0" x="570.0" y="1150.0" hdg="0.80051" length="1150.0">
+                <line />
+            </geometry>
+        </planView>        
+        <lanes>
+            <laneSection s="0.0">
+                <right>
+                    <lane id="-1" type="driving" level="0">                      
+                        <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
+                        <!-- <speed sOffset="0.0" max="13.89" />     -->
+                    </lane>
+                    <lane id="-2" type="driving" level="0">
+                        <width sOffset="0.0" a="10.0" b="0.0" c="0.0" d="0.0" />
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <!-- end of GG road -->            
 
     <!-- begin of Hoodi junction --> 
     <junction id="1" name="hoodijn">
-        <!-- abb to itpl -->
-        <connection id="0" incomingRoad="4" connectingRoad="5" contactPoint="start">
-            <laneLink from="-1" to="-1" />
-            <laneLink from="-2" to="-2" />
-        </connection>
         <!-- abb to hoodi village -->
         <connection id="1" incomingRoad="4" connectingRoad="13" contactPoint="start">
             <laneLink from="-1" to="-1" />
             <laneLink from="-1" to="-2" />
+        </connection>
+        <!-- abb to itpl -->
+        <connection id="0" incomingRoad="4" connectingRoad="5" contactPoint="start">
+            <laneLink from="-2" to="-2" />
         </connection>
         <!-- hoodi village to itpl -->
         <connection id="2" incomingRoad="14" connectingRoad="5" contactPoint="start">
@@ -400,7 +516,6 @@
         </connection>
         <!-- itpl to abb -->
         <connection id="4" incomingRoad="8" connectingRoad="9" contactPoint="start">
-            <laneLink from="-1" to="-1" />
             <laneLink from="-2" to="-2" />
         </connection>
         <!-- atm to abb -->
@@ -419,18 +534,59 @@
         </connection>
         <!-- hoodi to krpuram village -->
         <connection id="1" incomingRoad="11" connectingRoad="12" contactPoint="start">
-            <laneLink from="-1" to="-1" />
-            <laneLink from="-1" to="-2" />
+            <laneLink from="-2" to="-2" />
         </connection>
         <!-- hoodi to atm -->
-        <connection id="2" incomingRoad="11" connectingRoad="17" contactPoint="start">
+        <!-- <connection id="3" incomingRoad="11" connectingRoad="18" contactPoint="start">
             <laneLink from="-1" to="-1" />
             <laneLink from="-1" to="-2" />
-        </connection>
+        </connection> -->
         <!-- atm to krpuram     -->
-        <connection id="3" incomingRoad="18" connectingRoad="12" contactPoint="start">
+        <connection id="2" incomingRoad="17" connectingRoad="12" contactPoint="start">
             <laneLink from="-1" to="-1" />
             <laneLink from="-2" to="-1" />
+        </connection>
+    </junction>    
+
+    <!-- begin of keb1 junction --> 
+    <junction id="3" name="keb1jn">
+        <connection id="0" incomingRoad="2" connectingRoad="3" contactPoint="start">
+            <laneLink from="-1" to="-1" />
+        </connection>
+        <connection id="1" incomingRoad="2" connectingRoad="11" contactPoint="start">
+            <laneLink from="-2" to="-2" />
+        </connection>
+        <connection id="2" incomingRoad="10" connectingRoad="11" contactPoint="start">
+            <laneLink from="-1" to="-1" />
+        </connection>
+    </junction>    
+
+    <!-- begin of keb2 junction --> 
+    <junction id="4" name="keb2jn">
+        <connection id="0" incomingRoad="3" connectingRoad="4" contactPoint="start">
+            <laneLink from="-1" to="-1" />
+        </connection>
+        <connection id="1" incomingRoad="9" connectingRoad="10" contactPoint="start">
+            <laneLink from="-1" to="-1" />
+        </connection>  
+        <connection id="2" incomingRoad="9" connectingRoad="4" contactPoint="start">
+            <laneLink from="-2" to="-2" />
+        </connection>        
+    </junction>    
+
+    <!-- begin of rajapalya junction --> 
+    <junction id="5" name="rajajn">
+        <connection id="0" incomingRoad="5" connectingRoad="6" contactPoint="start">
+            <laneLink from="-1" to="-1" />
+        </connection>
+        <connection id="1" incomingRoad="5" connectingRoad="8" contactPoint="start">
+            <laneLink from="-2" to="-2" />
+        </connection>
+        <connection id="2" incomingRoad="7" connectingRoad="8" contactPoint="start">
+            <laneLink from="-1" to="-1" />
+        </connection>
+        <connection id="3" incomingRoad="7" connectingRoad="6" contactPoint="start">
+            <laneLink from="-2" to="-2" />
         </connection>     
     </junction>    
 

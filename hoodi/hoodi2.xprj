@@ -27,7 +27,7 @@
             </LaneChangeModelType>
         </VehiclePrototypeConfiguration>
     </VehiclePrototypes>
-    <Scenario network_filename="trafficlight.xodr">
+    <Scenario network_filename="hoodi2.xodr">
         <Simulation timestep="0.2" crash_exit="false">
             <TrafficComposition>
                 <VehicleType label="IDM1" fraction="0.4" relative_v0_randomization="0.2" />
@@ -36,20 +36,47 @@
             </TrafficComposition>
             <Road id="1">
                 <TrafficSource logging="false">
-                    <Inflow t="0" q_per_hour="3500" />
+                    <Inflow t="0" q_per_hour="10000" />
                 </TrafficSource>
             </Road>
             <Road id="7">
                 <TrafficSource logging="false">
-                    <Inflow t="0" q_per_hour="3500" />
+                    <Inflow t="0" q_per_hour="10000" />
                 </TrafficSource>
             </Road>
             <Road id="14">
                 <TrafficSource logging="false">
-                    <Inflow t="0" q_per_hour="1000" />
+                    <Inflow t="0" q_per_hour="4000" />
                 </TrafficSource>
             </Road>
+            <Road id="17">
+                <TrafficSource logging="false">
+                    <Inflow t="0" q_per_hour="4000" />
+                </TrafficSource>
+            </Road>
+            <Road id="18">
+                <TrafficSource logging="false">
+                    <Inflow t="0" q_per_hour="4000" />
+                </TrafficSource>
+            </Road>            
         </Simulation>
+        <Routes>
+            <Route label="krpuram_itpl">
+                <Road id="1" />
+                <Road id="2" />
+                <Road id="3" />
+                <Road id="4" />
+                <Road id="5" />
+                <Road id="6" />
+            </Route>
+            <Route label="krpuram_hoodi">
+                <Road id="1" />
+                <Road id="2" />
+                <Road id="3" />
+                <Road id="4" />
+                <Road id="13" />
+            </Route>  
+        </Routes>      
     </Scenario>
 </Movsim>
 
